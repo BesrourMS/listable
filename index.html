@@ -1,0 +1,3666 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listable 1.0.1</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <style>
+
+
+/*
+Based on Minimal CSS (minimalcss.com) under the MIT license.
+*/
+
+/* Reset */
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+/* Layout */
+body { background-color: #fff; color: #333;	font: 14px/20px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+header { width: 100%; margin: 0 auto; position: relative; padding: 20px 0; margin-bottom: 20px; }
+
+nav ul { margin: 0; }
+nav ul li { display: inline; margin-right: 20px; font-size: 16px; line-height: 28px; color: #333; }
+nav ul li a { color: #333; }
+
+.container { position: relative; max-width: 90%; margin: 0 auto; }
+
+footer { border-top:1px solid #ccc; font-size:11px; line-height:26px; color:#999; }
+footer a { color:#999999; }
+footer a:hover { color:#105CB6; }
+footer ul li { display:inline; list-style:none; padding-left:20px; }
+
+/* Typography */
+a { color: #105CB6; text-decoration: none; }
+a:hover, a:focus { color: #105CB6; text-decoration: underline; }
+a:active { color: #105CB6; }
+
+h1 { font-size: 24px; line-height: 20px; margin: 10px 0; }
+h2 { font-size: 20px; line-height: 20px; margin: 10px 0; }
+h3 { font-size: 16px; line-height: 20px; margin: 10px 0; }
+h4 { font-size: 14px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 12px; line-height: 20px; margin: 10px 0; }
+h5 { font-size: 10px; line-height: 20px; margin: 10px 0; }
+h1,h2,h3,h4,h5,h6 { color: #333; }
+
+p { margin-bottom: 10px; }
+
+.float-left     { float: left; }
+.float-right    { float: right; }
+img.float-left  { float: left; margin: 0 20px 20px 0; }
+img.float-right { float: right; margin: 0 0 20px 20px; }
+img.center      { margin: 0 auto; display: block; }
+
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Misc */
+hr { background-color: #ccc; border: 0px; color: #ccc; height: 1px; margin: 8px 0 20px 0; }
+pre, code { background:#E0ECF6; display:block; margin-bottom: 20px; padding:10px; }
+
+blockquote { margin: 10px 10px 20px; padding: 9px; background-color: #f8f8f8; color: #666; border-left: 5px solid #ddd; font: 14px/20px Georgia, Times, serif; quotes: "\201C" "\201D"; }
+blockquote p { margin: 0; }
+blockquote:before { content: open-quote; font-weight: bold; }
+blockquote:after  { content: close-quote; font-weight: bold; }
+
+/* List */
+ul { list-style-position:inside; }
+ol { list-style-position:inside; }
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th { font-weight: bold; }
+tfoot { font-style: italic; }
+
+/* Metadata part */
+
+.metadata {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 90%;
+}
+table.metadata td {
+  padding-right: 20px;
+}
+
+.stats {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.graph {
+  width: 100%;
+}
+.graph div { float: left; }
+.graph div:first-child { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+.graph div:last-child { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+.percent-done    { background-color: #71DD46; height: 10px; }
+.percent-fuzzy   { background-color: #FFD300; height: 10px; }
+.percent-untrans { background-color: #F1F1F1; height: 10px; }
+.legend {
+  font-size: smaller;
+  color: #aaa;
+  padding-top: 12px;
+  text-align: center;
+}
+
+/* Translations */
+table.translations {
+  width: 100%;
+  table-layout: fixed;
+}
+table.translations th, table.translations td {
+  padding: 5px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #E1E1E1;
+}
+table.translations th {
+  text-align: left;
+}
+table.translations th:first-child, table.translations td:first-child { padding-left: 0; }
+table.translations th:last-child, table.translations td:last-child { padding-right: 0; }
+
+.with-comments td {
+  border-bottom: none !important;
+}
+tr.comments div {
+  float: right;
+  max-width: 75%;
+  font-size: smaller;
+  color: #aaa;
+}
+tr.comments div p:last-child { margin-bottom: 0; }
+
+.fuzzy .tra {
+  color: #a9861b;
+}
+
+.msgctxt {
+  font-size: smaller;
+  color: #6d8e13;
+}
+
+
+  </style>
+</head>
+<body>
+<div class='container'>
+<table class='metadata'>
+<tr><td>Projet :</td><td>Listable 1.0.1</td></tr>
+<tr><td>Langue :</td><td>français</td></tr>
+</table>
+<div class='stats'>
+  <div class='graph'>
+    <div class='percent-done' style='width: 100%'>&nbsp;</div>
+  </div>
+  <div class='legend'>Traduit : 537 de 537 (100 %)  </div>
+</div>
+<table class='translations'>
+  <thead>
+    <tr>
+      <th>Texte original — anglais</th>
+      <th>Traduction — français</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class='i'>
+<td class='src'  lang='en'>
+Oops! That page can&amp;rsquo;t be found.</td>
+<td class='tra'  lang='fr'>
+Oups ! Cette page n’a pas été trouvée.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+It looks like nothing was found at this location. Maybe try one of the links below or a search?</td>
+<td class='tra'  lang='fr'>
+Il semble que rien n’a été trouvé à cet endroit. Essayez peut-être un des liens ci-dessous ou une recherche?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This %s is faved!</td>
+<td class='tra'  lang='fr'>
+Ce %s est fauva !</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Faved!</td>
+<td class='tra'  lang='fr'>
+Préféré !</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add to favorites</td>
+<td class='tra'  lang='fr'>
+Ajouter à mes favoris</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Favorite</td>
+<td class='tra'  lang='fr'>
+Préféré</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Notes:</td>
+<td class='tra'  lang='fr'>
+Notes:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update Bookmark</td>
+<td class='tra'  lang='fr'>
+Mettre à jour des favoris</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Bookmark</td>
+<td class='tra'  lang='fr'>
+Ajouter aux Favoris</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Clear</td>
+<td class='tra'  lang='fr'>
+Clair</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Category: </td>
+<td class='tra'  lang='fr'>
+Catégorie:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>1 review</li>
+  <li>%1$s reviews</li>
+</ol>
+ <span class='msgctxt'>[comments title]</span></td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>1 avis</li>
+  <li>avis</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>1 comment</li>
+  <li>%1$s comments</li>
+</ol>
+ <span class='msgctxt'>[comments title]</span></td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Un commentaire</li>
+  <li>Des commentaires</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Comment navigation</td>
+<td class='tra'  lang='fr'>
+Découvrez les commentaires</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Older Comments</td>
+<td class='tra'  lang='fr'>
+Commentaires plus anciens</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Newer Comments</td>
+<td class='tra'  lang='fr'>
+Commentaires récents</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Comments are closed.</td>
+<td class='tra'  lang='fr'>
+Les commentaires sont fermés.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Rate and write a review</td>
+<td class='tra'  lang='fr'>
+Notez et donnez votre avis.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+https://wordpress.org/</td>
+<td class='tra'  lang='fr'>
+https://wordpress.org/</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Proudly powered by %s</td>
+<td class='tra'  lang='fr'>
+Fi&amp;egrave;rement propuls&amp;eacute; par %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+and</td>
+<td class='tra'  lang='fr'>
+et</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+%1$s by %2$s.</td>
+<td class='tra'  lang='fr'>
+%1$s par %2$s.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Primary Menu</td>
+<td class='tra'  lang='fr'>
+Menu primaire</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Footer Menu</td>
+<td class='tra'  lang='fr'>
+Menu bas de page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The import didn't work completely!</td>
+<td class='tra'  lang='fr'>
+L'importation ne fonctionne pas complètement!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Check out the errors given. You might want to try reloading the page and try again.</td>
+<td class='tra'  lang='fr'>
+Consultez les erreurs de données. Vous pourriez recharger la page et essayer à nouveau.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Importing the demo data will overwrite your current site content and options. Proceed anyway?</td>
+<td class='tra'  lang='fr'>
+L’importation des données de démonstration va écraser votre contenu et vos options actuelles. Voulez-vous continuer malgré tout?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Phew...that was a hard one!</td>
+<td class='tra'  lang='fr'>
+Ouf… ça a été dur!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The demo data was imported without a glitch! Awesome! </td>
+<td class='tra'  lang='fr'>
+Les données de démonstration ont été importées sans un pépin! Impressionnant!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&lt;i&gt;We have reloaded the page on the right, so you can see the brand new data!&lt;/i&gt;</td>
+<td class='tra'  lang='fr'>
+&lt;i&gt;Nous avons rechargé la page sur la droite, de sorte que vous puissiez voir les données rafraîchies !&lt;/i&gt;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remember to update the passwords and roles of imported users.</td>
+<td class='tra'  lang='fr'>
+Rappelez-vous de mettre à jour les mots de passe et les rôles des utilisateurs importés.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All done!</td>
+<td class='tra'  lang='fr'>
+Terminé!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Working...</td>
+<td class='tra'  lang='fr'>
+Travailler...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The setting up of the demo widgets failed...</td>
+<td class='tra'  lang='fr'>
+Installation terminée des widgets de démo ...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The setting up of the demo widgets failed</td>
+<td class='tra'  lang='fr'>
+La mise en place des widgets de démonstration a échoué</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+(The script returned the following message</td>
+<td class='tra'  lang='fr'>
+( Le script a renvoyé le message suivant</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Finished setting up the demo widgets...</td>
+<td class='tra'  lang='fr'>
+Installation terminée des widgets de démo ...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The importing of the theme options has failed...</td>
+<td class='tra'  lang='fr'>
+L'importation des options du thème a échoué...</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The importing of the theme options has failed</td>
+<td class='tra'  lang='fr'>
+L'importation des options du thème a échoué</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Finished importing the demo theme options...</td>
+<td class='tra'  lang='fr'>
+L’importation des options du thème est terminée.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Importing posts | Step</td>
+<td class='tra'  lang='fr'>
+Importation messages | Étape</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Error:</td>
+<td class='tra'  lang='fr'>
+Erreur:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You can reload the page and try again.</td>
+<td class='tra'  lang='fr'>
+Vous pouvez recharger la page et essayer à nouveau.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Skip to content</td>
+<td class='tra'  lang='fr'>
+Aller au contenu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+What are you looking for?</td>
+<td class='tra'  lang='fr'>
+Que cherchez-vous?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Gallery Images</td>
+<td class='tra'  lang='fr'>
+Galerie Images</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Gallery Image</td>
+<td class='tra'  lang='fr'>
+Gallery Image</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hero Area</td>
+<td class='tra'  lang='fr'>
+zone Hero</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add an image or a video to be used as a Background for the Hero Area on the Front Page</td>
+<td class='tra'  lang='fr'>
+Ajouter une image ou une vidéo à utiliser comme arrière-plan pour la zone Hero sur le Front Page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Tip: Uploading</td>
+<td class='tra'  lang='fr'>
+Astuce: Uploading</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+multiple images and/or videos</td>
+<td class='tra'  lang='fr'>
+plusieurs images et / ou vidéos</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+will</td>
+<td class='tra'  lang='fr'>
+va</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+randomly</td>
+<td class='tra'  lang='fr'>
+au hasard</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+pick one when page is loaded</td>
+<td class='tra'  lang='fr'>
+choisir un lorsque la page est chargée</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Playlist</td>
+<td class='tra'  lang='fr'>
+Playlist</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Front Page » Highlighted Categories</td>
+<td class='tra'  lang='fr'>
+Front Page »Highlighted Catégories</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&lt;p&gt;You can select which categories to highlight, by adding their &lt;em&gt;slugs&lt;/em&gt;, separated by a comma: &lt;em&gt;food, hotels, restaurants&lt;/em&gt;&lt;/p&gt;&lt;p&gt; You can add change their &lt;em&gt;shown name&lt;/em&gt; (in case it is too long) with this pattern: &lt;em&gt;slug (My Custom Name)&lt;/em&gt;&lt;/p&gt;</td>
+<td class='tra'  lang='fr'>
+&lt;p&gt;Vous pouvez sélectionner les catégories à mettre en évidence, en ajoutant leurs &lt;em&gt;limaces&lt;/em&gt; séparés par une virgule: &lt;em&gt;nourriture, hôtels, restaurants&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Vous pouvez les modifier &lt;em&gt;nom affiché&lt;/em&gt; (dans le cas où il est trop long) en utilisant ce modèle : &lt;em&gt;plug (Mon nom personnalisé)&lt;/em&gt;&lt;/p&gt;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Frontend Categories</td>
+<td class='tra'  lang='fr'>
+Catégories principales</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Colors</td>
+<td class='tra'  lang='fr'>
+Colors</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Theme Options</td>
+<td class='tra'  lang='fr'>
+Options du thème</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+General</td>
+<td class='tra'  lang='fr'>
+Général</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Footer Copyright Text</td>
+<td class='tra'  lang='fr'>
+Texte Copyright Bas de Page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Copyright &amp;copy; 2015 Company Inc.   &amp;bull;   Address  &amp;bull;   Tel: 42-898-4363</td>
+<td class='tra'  lang='fr'>
+Copyright &amp;copy; 2015 Company Inc.   &amp;bull;   Address  &amp;bull;   Tel: 42-898-4363</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Map Options</td>
+<td class='tra'  lang='fr'>
+Options Carte</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Mapbox Integration (optional)</td>
+<td class='tra'  lang='fr'>
+Intégration Mapbox (en option )</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+We are offering integration with the</td>
+<td class='tra'  lang='fr'>
+Nous offrons l'intégration avec le</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Mapbox</td>
+<td class='tra'  lang='fr'>
+Mapbox</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+service, so you can have better looking and highly performance maps</td>
+<td class='tra'  lang='fr'>
+service, vous pouvez avoir un meilleur avenir et des cartes très performantes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Get a FREE token</td>
+<td class='tra'  lang='fr'>
+Obtenez un jeton GRATUIT</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+and paste it below. If there is nothing added, we will fallback to the Google Maps service</td>
+<td class='tra'  lang='fr'>
+et collez-le ci-dessous. Si rien n’est ajouté, nous utiliserons les services Google Maps</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Mapbox Style</td>
+<td class='tra'  lang='fr'>
+Style Mapbox</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Custom styles works only if you have set a valid Mapbox API token in the field above.</td>
+<td class='tra'  lang='fr'>
+Les styles personnalisés ne fonctionnent que si vous avez défini une API MapBox valable dans le champ ci-dessus.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Custom JavaScript</td>
+<td class='tra'  lang='fr'>
+JavaScript personnalisé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Header</td>
+<td class='tra'  lang='fr'>
+Entête</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Easily add Custom Javascript code. This code will be loaded in the &lt;head&gt; section.</td>
+<td class='tra'  lang='fr'>
+Ajoutez facilement un code personnalisé Javascript. Ce code sera chargé dans le &lt;head&gt; de la section.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Footer</td>
+<td class='tra'  lang='fr'>
+Bas de page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You can paste here your Google Analytics tracking code (or for what matters any tracking code) and we will put it on every page.</td>
+<td class='tra'  lang='fr'>
+Vous pouvez coller ici votre code de suivi Google Analytics (ou tout autre code de suivi) et nous le mettrons sur chaque page.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Demo Data</td>
+<td class='tra'  lang='fr'>
+Données de démo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Import demo data</td>
+<td class='tra'  lang='fr'>
+Importer des données de démonstration</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please wait a few minutes (between 1 and 3 minutes usually, but depending on your hosting it can take longer) and &lt;strong&gt;don't reload the page&lt;/strong&gt;. You will be notified as soon as the import has finished!</td>
+<td class='tra'  lang='fr'>
+Veuillez patienter quelques minutes (entre 1 et 3 minutes habituellement, mais selon le votre hébergement, il peut prendre plus de temps) et &lt;strong&gt;ne pas recharger la page&lt;/strong&gt;. Vous serez averti dès que l’importation est terminée !</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Site Header</td>
+<td class='tra'  lang='fr'>
+En-tête du site</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Transparent on Front Page Hero</td>
+<td class='tra'  lang='fr'>
+Transparent sur Front Page de Garde</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Header Background Color</td>
+<td class='tra'  lang='fr'>
+Couleur d’arrière plan de l'en-tête</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Site Title Color</td>
+<td class='tra'  lang='fr'>
+Couleur titre du site</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search Color</td>
+<td class='tra'  lang='fr'>
+Recherche Couleur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Nav Link Color</td>
+<td class='tra'  lang='fr'>
+Couleur du lien de navigation</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Nav Active Color</td>
+<td class='tra'  lang='fr'>
+Couleur de la navigation active</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Nav Button Color</td>
+<td class='tra'  lang='fr'>
+Couleur de la bouton de navigation</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Main Content</td>
+<td class='tra'  lang='fr'>
+Contenu principal</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Content Background</td>
+<td class='tra'  lang='fr'>
+Contenu : Arrière plan</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Page Background</td>
+<td class='tra'  lang='fr'>
+Arrière-plan de la page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Page Titles Color</td>
+<td class='tra'  lang='fr'>
+Couleur des titres de page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Headings Color</td>
+<td class='tra'  lang='fr'>
+Couleur des en-têtes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Text Color</td>
+<td class='tra'  lang='fr'>
+Couleur de texte</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Buttons Color</td>
+<td class='tra'  lang='fr'>
+Couleur des boutons</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cards</td>
+<td class='tra'  lang='fr'>
+Cartes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cards Background</td>
+<td class='tra'  lang='fr'>
+Arrière-plan des cartes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Title Color</td>
+<td class='tra'  lang='fr'>
+Couleur de titre</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Icons Color</td>
+<td class='tra'  lang='fr'>
+Couleur des icônes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Icons Border Color</td>
+<td class='tra'  lang='fr'>
+Couleur de la bordure des icônes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pin Background Color</td>
+<td class='tra'  lang='fr'>
+Couleur d’arrière plan de pin</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pin Color</td>
+<td class='tra'  lang='fr'>
+Couleur de l’icône </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pre Footer</td>
+<td class='tra'  lang='fr'>
+Pre Footer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Background</td>
+<td class='tra'  lang='fr'>
+Arrière-plan</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Credits Color</td>
+<td class='tra'  lang='fr'>
+Couleur des “Crédits”</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Other Colors</td>
+<td class='tra'  lang='fr'>
+Autres couleurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Accent Color</td>
+<td class='tra'  lang='fr'>
+Couleur Accent</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Gray Color</td>
+<td class='tra'  lang='fr'>
+Couleur grise</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Descriptions</td>
+<td class='tra'  lang='fr'>
+Descriptions</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Style</td>
+<td class='tra'  lang='fr'>
+Style</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Customize Front Page Sections</td>
+<td class='tra'  lang='fr'>
+Personnaliser les sections de la page d’accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Customize Listings Layout</td>
+<td class='tra'  lang='fr'>
+Personnaliser les visuels des annonces</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Page Subtitle</td>
+<td class='tra'  lang='fr'>
+Sous-titre de page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This is the subtitle that will be shown in the page's Hero Area, below the page title.</td>
+<td class='tra'  lang='fr'>
+Sous-titre qui sera affiché dans la bannière, au-dessous du titre de la page.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing</td>
+<td class='tra'  lang='fr'>
+Annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listings</td>
+<td class='tra'  lang='fr'>
+Annonces</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All %s</td>
+<td class='tra'  lang='fr'>
+Tous %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add New</td>
+<td class='tra'  lang='fr'>
+Ajouter un nouveau</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add %s</td>
+<td class='tra'  lang='fr'>
+Ajouter %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit</td>
+<td class='tra'  lang='fr'>
+Modifier</td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+Edit %s</td>
+<td class='tra'  lang='fr'>
+Modifier %s</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+translators: %s: Name of current post<br>
+</p>
+</div></td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New %s</td>
+<td class='tra'  lang='fr'>
+Nouveau %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+View %s</td>
+<td class='tra'  lang='fr'>
+Vue %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search %s</td>
+<td class='tra'  lang='fr'>
+Recherche %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No %s found</td>
+<td class='tra'  lang='fr'>
+ %s non trouvé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No %s found in trash</td>
+<td class='tra'  lang='fr'>
+ %s non trouvé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Parent %s</td>
+<td class='tra'  lang='fr'>
+Parent %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This is where you can create and manage %s.</td>
+<td class='tra'  lang='fr'>
+C’est ici que vous pouvez créer et gérer les annonces %s.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing Type</td>
+<td class='tra'  lang='fr'>
+Type annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listings Types</td>
+<td class='tra'  lang='fr'>
+Types annonces</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Types</td>
+<td class='tra'  lang='fr'>
+Types</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Parent %s:</td>
+<td class='tra'  lang='fr'>
+Parent %s:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update %s</td>
+<td class='tra'  lang='fr'>
+Mettre à jour %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add New %s</td>
+<td class='tra'  lang='fr'>
+Ajouter un nouveau %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New %s Name</td>
+<td class='tra'  lang='fr'>
+Nouvel %s Nom</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+listing-type <span class='msgctxt'>[Listing type slug - resave permalinks after changing this]</span></td>
+<td class='tra'  lang='fr'>
+type-annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing Category</td>
+<td class='tra'  lang='fr'>
+Catégorie d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listings Categories</td>
+<td class='tra'  lang='fr'>
+Catégories des annonces</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Categories</td>
+<td class='tra'  lang='fr'>
+Catégories</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+listing-category <span class='msgctxt'>[Listing category slug - resave permalinks after changing this]</span></td>
+<td class='tra'  lang='fr'>
+catégorie-annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing Tags</td>
+<td class='tra'  lang='fr'>
+Mots-clés d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing Tag</td>
+<td class='tra'  lang='fr'>
+Mot-clé d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search Listing Tags</td>
+<td class='tra'  lang='fr'>
+Recherche Mots-clés d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Popular Tags</td>
+<td class='tra'  lang='fr'>
+Mots-clés populaires</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All Listing Tags</td>
+<td class='tra'  lang='fr'>
+Tous les mots-clés d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Parent Listing Tag</td>
+<td class='tra'  lang='fr'>
+Mot-clé d'annonce parent</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Parent Listing Tag:</td>
+<td class='tra'  lang='fr'>
+Mot-clé d'annonce parent:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Edit Listing Tag</td>
+<td class='tra'  lang='fr'>
+Modifier mot-clé d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+View Tag</td>
+<td class='tra'  lang='fr'>
+Voir mot-clé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update Listing Tag</td>
+<td class='tra'  lang='fr'>
+Mise à jour de mot-clé d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add New Listing Tag</td>
+<td class='tra'  lang='fr'>
+Ajouter nouveau mot-clé d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+New Listing Tag Name</td>
+<td class='tra'  lang='fr'>
+Nouveau nom de mot-clé d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Separate tags with commas</td>
+<td class='tra'  lang='fr'>
+Séparer les mots-clés avec des virgules</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add or remove tags</td>
+<td class='tra'  lang='fr'>
+Ajouter ou supprimer des mots-clés</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Choose from the most used tags</td>
+<td class='tra'  lang='fr'>
+Choisir parmi les mots-clés les plus utilisés</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No tags found.</td>
+<td class='tra'  lang='fr'>
+Aucun mot-clé trouvé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No tags</td>
+<td class='tra'  lang='fr'>
+Pas des mots-clés</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+listing-tag <span class='msgctxt'>[permalink]</span></td>
+<td class='tra'  lang='fr'>
+Mot-clé d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Post a Listing</td>
+<td class='tra'  lang='fr'>
+Publier une annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing Dashboard</td>
+<td class='tra'  lang='fr'>
+Tableau de bord d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Submission</td>
+<td class='tra'  lang='fr'>
+Soumission</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hours</td>
+<td class='tra'  lang='fr'>
+Heures</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Mon - Fri: 09:00 - 23:00 
+<br>Sat - Sun: 17:00 - 23:00</td>
+<td class='tra'  lang='fr'>
+Lun - Ven: 09:00-23:00
+<br>Sam - Dim: 17h00-23:00</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Phone</td>
+<td class='tra'  lang='fr'>
+Téléphone</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+e.g +42-898-4364</td>
+<td class='tra'  lang='fr'>
+e.g + 42-898-4364</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing Name</td>
+<td class='tra'  lang='fr'>
+Nom d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your listing name</td>
+<td class='tra'  lang='fr'>
+Nom de l'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+e.g Speciality Coffe Shop</td>
+<td class='tra'  lang='fr'>
+e.g Spécialité Café</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Keep it short and descriptive as it will appear on search results instead of the ling description</td>
+<td class='tra'  lang='fr'>
+Soyez bref et décrivez l'annonce telle qu'elle apparaîtra sur les résultats de la recherche au lieu de la description du lien.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+An overview of your listing and the things you love about it.</td>
+<td class='tra'  lang='fr'>
+Un aperçu de votre annonce et les choses que vous aimez à ce sujet.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Choose one or more categories</td>
+<td class='tra'  lang='fr'>
+Choisissez une ou plusieurs catégorie(s)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Visitors can filter their search by the categories and amenities they want - so make sure you choose them wisely and include all the relevant ones</td>
+<td class='tra'  lang='fr'>
+Les visiteurs peuvent filtrer leur recherche par les catégories et les commodités qu'ils veulent - alors assurez-vous de les choisir judicieusement et inclure tous celles qui sont pertinentes.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add tags</td>
+<td class='tra'  lang='fr'>
+Ajouter des mots-clés</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Visitors can filter their search by the amenities too, so make sure you include all the relevant ones.</td>
+<td class='tra'  lang='fr'>
+Les visiteurs peuvent filtrer leur recherche par les trop d'agréments, alors assurez-vous d'inclure tous ceux qui sont pertinents.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+e.g 34 Wigmore Street, London</td>
+<td class='tra'  lang='fr'>
+e.g 34 Wigmore Street, Londres</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Leave this blank if the location is not important.</td>
+<td class='tra'  lang='fr'>
+Laissez ce champ vide si l'emplacement n'est pas important.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+First photo appears on listing card.</td>
+<td class='tra'  lang='fr'>
+Première photo apparaît sur la carte d'annonce.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hours of Operation</td>
+<td class='tra'  lang='fr'>
+Heures d'ouverture</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Feel free to change the text format to fit your needs.</td>
+<td class='tra'  lang='fr'>
+Sentez-vous libre pour changer le format de texte pour l'adapter à vos besoins.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+e.g yourwebsite.com, London</td>
+<td class='tra'  lang='fr'>
+e.g yourwebsite.com, Londres</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You can add more similar panels to better help the user fill the form</td>
+<td class='tra'  lang='fr'>
+Vous pouvez ajouter des panneaux similaires afin de mieux aider l'utilisateur à remplir le formulaire</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Position</td>
+<td class='tra'  lang='fr'>
+Position</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Image</td>
+<td class='tra'  lang='fr'>
+Image</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+ID: %d</td>
+<td class='tra'  lang='fr'>
+ID: %d</td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+%1$s</td>
+<td class='tra'  lang='fr'>
+%1$s</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+translators: used between list items, there is a space after the comma<br>
+</p>
+</div></td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your name</td>
+<td class='tra'  lang='fr'>
+Votre nom</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+your@email.com</td>
+<td class='tra'  lang='fr'>
+your@email.com</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Main Menu</td>
+<td class='tra'  lang='fr'>
+Menu primaire</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Social Menu</td>
+<td class='tra'  lang='fr'>
+Menu social</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The Auto importing script could not be loaded. Please use the  </td>
+<td class='tra'  lang='fr'>
+Le script d’importation automatique ne peut être chargé. Utiliser plutôt le</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+WordPress default import</td>
+<td class='tra'  lang='fr'>
+Importation par défaut de WordPress</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+and import the .XML file provided in the archive you've received on purchase manually.</td>
+<td class='tra'  lang='fr'>
+et importer manuellement le fichier .xml fourni dans l’archive que vous avez reçu lors de l’achat.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+There was an error when reading this WXR file</td>
+<td class='tra'  lang='fr'>
+Il y avait une erreur lors de la lecture de ce fichier WXR</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Details are shown above. The importer will now try again with a different parser...</td>
+<td class='tra'  lang='fr'>
+Les détails sont présentés ci-dessus. L'importateur va maintenant essayer de nouveau avec un analyseur différent ... </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This does not appear to be a WXR file, missing/invalid WXR version number</td>
+<td class='tra'  lang='fr'>
+Cela ne semble pas être un fichier WXR, WXR manquant / numéro de version non valide </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Sorry, there has been an error.</td>
+<td class='tra'  lang='fr'>
+Désolé, il y a eu une erreur.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The file does not exist, please try again.</td>
+<td class='tra'  lang='fr'>
+Le fichier n'existe pas, s'il vous plaît essayer à nouveau.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All done.</td>
+<td class='tra'  lang='fr'>
+Terminé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Have fun!</td>
+<td class='tra'  lang='fr'>
+S'amuser!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The export file could not be found at &lt;code&gt;%s&lt;/code&gt;. It is likely that this was caused by a permissions problem.</td>
+<td class='tra'  lang='fr'>
+Le fichier d'exportation n'a pu être trouvée à &lt;code&gt;%s&lt;/ code&gt;. Il est probable que cela a été causé par un problème d'autorisations.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This WXR file (version %s) may not be supported by this version of the importer. Please consider updating.</td>
+<td class='tra'  lang='fr'>
+Ce fichier WXR (version %s) ne peut être pris en charge par cette version de l’importateur. Faites une mise à jour.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to import author %s. Their posts will be attributed to the current user.</td>
+<td class='tra'  lang='fr'>
+Impossible d'importer l'auteur %s. Leurs postes seront attribués à l'utilisateur actuel.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Assign Authors</td>
+<td class='tra'  lang='fr'>
+Attribution d’auteurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+To make it easier for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site. For example, you may want to import all the entries as &lt;code&gt;admin&lt;/code&gt;s entries.</td>
+<td class='tra'  lang='fr'>
+Pour vous rendre plus facile l'édition et la sauvegarde du contenu importé, vous pouvez réaffecter l'auteur de l'article importé à un utilisateur existant de ce site. Par exemple, vous pouvez importer tous les articles que &lt;code&gt;admin&lt;/code&gt; a réalisé.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+If a new user is created by WordPress, a new password will be randomly generated and the new user's role will be set as %s. Manually changing the new user's details will be necessary.</td>
+<td class='tra'  lang='fr'>
+Si un nouvel utilisateur est créé par WordPress, un nouveau mot de passe sera généré aléatoirement et le rôle du nouvel utilisateur sera défini comme %s. La modification manuelle des détails du nouvel utilisateur sera nécessaire.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Import Attachments</td>
+<td class='tra'  lang='fr'>
+Pièces jointes à l'importation</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Download and import file attachments</td>
+<td class='tra'  lang='fr'>
+Télécharger et importer les pièces jointes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Submit</td>
+<td class='tra'  lang='fr'>
+Soumettre</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Import author:</td>
+<td class='tra'  lang='fr'>
+Importer auteur:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+or create new user with login name:</td>
+<td class='tra'  lang='fr'>
+ou de créer un nouvel utilisateur avec le nom de connexion:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+as a new user:</td>
+<td class='tra'  lang='fr'>
+comme un nouvel utilisateur:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+assign posts to an existing user:</td>
+<td class='tra'  lang='fr'>
+attribuer des postes à un utilisateur existant:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+or assign posts to an existing user:</td>
+<td class='tra'  lang='fr'>
+ou affecter les postes à un utilisateur existant:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+- Select -</td>
+<td class='tra'  lang='fr'>
+- Sélectionner -</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to create new user for %s. Their posts will be attributed to the current user.</td>
+<td class='tra'  lang='fr'>
+Impossible de créer un nouvel utilisateur pour %s. Les articles seront attribués à l’utilisateur actuel.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to import category %s</td>
+<td class='tra'  lang='fr'>
+Impossible d'importer la catégorie %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to import post tag %s</td>
+<td class='tra'  lang='fr'>
+Échec d’importation du mot-clef de l’article %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to import %s %s</td>
+<td class='tra'  lang='fr'>
+Impossible d'importer %s %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to import "%s": Invalid post type %s</td>
+<td class='tra'  lang='fr'>
+Impossible d'importer "%s": Type de poste invalide %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+%s "%s" already exists.</td>
+<td class='tra'  lang='fr'>
+%s "%s" existe déjà.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Failed to import %s "%s"</td>
+<td class='tra'  lang='fr'>
+Impossible d'importer %s "%s"</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Menu item skipped due to missing menu slug</td>
+<td class='tra'  lang='fr'>
+Elément du menu ignoré à cause d'un label de menu manquant</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Menu item skipped due to invalid menu slug: %s</td>
+<td class='tra'  lang='fr'>
+Elément du menu ignoré à cause d'un label de menu invalide: %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Fetching attachments is not enabled</td>
+<td class='tra'  lang='fr'>
+Récupérer les pièces jointes ne sont pas permis</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Invalid file type</td>
+<td class='tra'  lang='fr'>
+Type de fichier invalide</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remote server did not respond</td>
+<td class='tra'  lang='fr'>
+Le serveur distant n'a pas répondu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remote server returned error response %1$d %2$s</td>
+<td class='tra'  lang='fr'>
+Le serveur distant renvoyé une réponse d'erreur %1$d %2$s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remote file is incorrect size</td>
+<td class='tra'  lang='fr'>
+Fichier à distance est de taille incorrecte</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Zero size file downloaded</td>
+<td class='tra'  lang='fr'>
+Taille zéro fichier téléchargé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remote file is too large, limit is %s</td>
+<td class='tra'  lang='fr'>
+Fichier à distance est trop grande, la limite est de %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Import WordPress</td>
+<td class='tra'  lang='fr'>
+Importation WordPress</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files.</td>
+<td class='tra'  lang='fr'>
+Une nouvelle version de cet importateur est disponible. S'il vous plaît mettre à jour à la version %s pour assurer la compatibilité avec les fichiers d'exportation les plus récents.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Howdy! Upload your WordPress eXtended RSS (WXR) file and we'll import the posts, pages, comments, custom fields, categories, and tags into this site.</td>
+<td class='tra'  lang='fr'>
+Bonjour ! Téléchargez le fichier WordPress eXtended RSS (WXR) et l’importation des messages, pages, commentaires, champs personnalisés, catégories et des étiquettes dans ce site débutera.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Choose a WXR (.xml) file to upload, then click Upload file and import.</td>
+<td class='tra'  lang='fr'>
+Choisissez un fichier WXR (. Xml) à télécharger, puis cliquez sur: Télécharger un fichier et l'importer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add logo</td>
+<td class='tra'  lang='fr'>
+Ajouter logo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Set as logo</td>
+<td class='tra'  lang='fr'>
+Définir comme logo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Choose logo</td>
+<td class='tra'  lang='fr'>
+Choisir le Logo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Change logo</td>
+<td class='tra'  lang='fr'>
+Changer le logo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remove logo</td>
+<td class='tra'  lang='fr'>
+Retirer le logo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No logo set</td>
+<td class='tra'  lang='fr'>
+Aucun logo défini</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Site Title, Tagline, and Logo</td>
+<td class='tra'  lang='fr'>
+Titre du site, Slogan et Logo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Logo</td>
+<td class='tra'  lang='fr'>
+Logo</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Site Logo</td>
+<td class='tra'  lang='fr'>
+Logo du site</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Install Required Plugins</td>
+<td class='tra'  lang='fr'>
+Installer les Plugins Requis</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Install Plugins</td>
+<td class='tra'  lang='fr'>
+Installer Plugins</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Installing Plugin: %s</td>
+<td class='tra'  lang='fr'>
+Installation Plugin: %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Something went wrong with the plugin API.</td>
+<td class='tra'  lang='fr'>
+Quelque chose se passait mal avec l'API de plugin.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>This theme requires the following plugin: %1$s.</li>
+  <li>This theme requires the following plugins: %1$s.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Ce thème nécessite le plugin suivant: %1$s.</li>
+  <li>Ce thème nécessite les plugins suivants: %1$s.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>This theme recommends the following plugin: %1$s.</li>
+  <li>This theme recommends the following plugins: %1$s.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Ce thème recommande le plugin suivant: %1$s.</li>
+  <li>Ce thème recommande les plugins suivants: %1$s.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Sorry, but you do not have the correct permissions to install the %1$s plugin.</li>
+  <li>Sorry, but you do not have the correct permissions to install the %1$s plugins.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Désolé, mais vous ne disposez pas des autorisations nécessaires pour installer l’exension %1$s
+<br>.</li>
+  <li>Désolé, mais vous ne disposez pas des autorisations nécessaires pour installer les plugins %1$s.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.</li>
+  <li>The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Le plugin doit être mis à jour dans sa dernière version afin d’assurer une compatibilité maximale avec ce thème : %1$s.</li>
+  <li>Les plugins suivants doivent être mis à jour pour leur dernière version afin d'assurer une compatibilité maximale avec ce thème: %1$s.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>There is an update available for: %1$s.</li>
+  <li>There are updates available for the following plugins: %1$s.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Il y a une mise à jour disponible pour: %1$s.</li>
+  <li>Il y a des mises à jour disponibles pour les plugins suivants: %1$s.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Sorry, but you do not have the correct permissions to update the %1$s plugin.</li>
+  <li>Sorry, but you do not have the correct permissions to update the %1$s plugins.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Désolé, mais vous ne disposez pas d’autorisations nécessaires pour mettre à jour %1$s l’extension.</li>
+  <li>Désolé, mais vous ne disposez pas des autorisations nécessaires pour mettre à jour les plugins %1$s</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>The following required plugin is currently inactive: %1$s.</li>
+  <li>The following required plugins are currently inactive: %1$s.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Le plugin requis suivant est actuellement inactif: %1$s.</li>
+  <li>Les plugins requis suivants sont actuellement inactifs: %1$s.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>The following recommended plugin is currently inactive: %1$s.</li>
+  <li>The following recommended plugins are currently inactive: %1$s.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Le plugin recommandé suivant est actuellement inactif: %1$s.</li>
+  <li>Les plugins recommandés suivants sont actuellement inactifs: %1$s.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Sorry, but you do not have the correct permissions to activate the %1$s plugin.</li>
+  <li>Sorry, but you do not have the correct permissions to activate the %1$s plugins.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Désolé, mais vous ne disposez pas des autorisations nécessaires pour activer le plugin %1$s</li>
+  <li>Désolé, mais vous ne disposez pas des autorisations nécessaires pour activer les plugins %1$s </li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Begin installing plugin</li>
+  <li>Begin installing plugins</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Instalattion du plugin en cours</li>
+  <li>Instalattion des plugins en cours</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Begin updating plugin</li>
+  <li>Begin updating plugins</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Mise à jour du plugin en cours</li>
+  <li>Mise à jour des plugins en cours</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Begin activating plugin</li>
+  <li>Begin activating plugins</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Activation du plugin en cours</li>
+  <li>Activation des plugins en cours</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Return to Required Plugins Installer</td>
+<td class='tra'  lang='fr'>
+Retourner à l'installateur de plugins requis</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Return to the dashboard</td>
+<td class='tra'  lang='fr'>
+Retour au tableau de bord</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Plugin activated successfully.</td>
+<td class='tra'  lang='fr'>
+Plugin activé avec succès.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The following plugin was activated successfully:</td>
+<td class='tra'  lang='fr'>
+Le plugin suivant a été activé avec succès:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No action taken. Plugin %1$s was already active.</td>
+<td class='tra'  lang='fr'>
+Pas d'action prise. Plugin %1$ s était déjà actif.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.</td>
+<td class='tra'  lang='fr'>
+Plugin non activé. Une version plus récente de %s est nécessaire pour ce thème. S'il vous plaît mettre à jour le plugin.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All plugins installed and activated successfully. %1$s</td>
+<td class='tra'  lang='fr'>
+Tous les plugins installés et activés avec succès. %1$s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Dismiss this notice</td>
+<td class='tra'  lang='fr'>
+Ne tenez pas compte de cet avertissement</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please contact the administrator of this site for help.</td>
+<td class='tra'  lang='fr'>
+S'il vous plaît contacter l'administrateur de ce site pour l'aide.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This plugin needs to be updated to be compatible with your theme.</td>
+<td class='tra'  lang='fr'>
+Ce plugin a besoin d'être mis à jour pour être compatible avec votre thème.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update Required</td>
+<td class='tra'  lang='fr'>
+Mise à jour requise</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Set the parent_slug config variable instead.</td>
+<td class='tra'  lang='fr'>
+Définissez la variable de configuration parent slug à la place.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Return to the Dashboard</td>
+<td class='tra'  lang='fr'>
+Retour au tableau de bord</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The remote plugin package does not contain a folder with the desired slug and renaming did not work.</td>
+<td class='tra'  lang='fr'>
+Le pack d’extension à distance ne contient pas le dossier avec le tag souhaité et le renommage ne fonctionne pas.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.</td>
+<td class='tra'  lang='fr'>
+Veuillez contacter le fournisseur de l’extension et demander-lui d’empaqueter son extension en respectant les instructions de WordPress.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The remote plugin package consists of more than one file, but the files are not packaged in a folder.</td>
+<td class='tra'  lang='fr'>
+Le paquet de l’extension contient plus d’un fichier, mais les fichiers ne sont pas empaquetés dans un dossier.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+and <span class='msgctxt'>[plugin A *and* plugin B]</span></td>
+<td class='tra'  lang='fr'>
+et</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+TGMPA v%s <span class='msgctxt'>[%s = version number]</span></td>
+<td class='tra'  lang='fr'>
+TGMPA v%s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Required</td>
+<td class='tra'  lang='fr'>
+Obligatoire</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Recommended</td>
+<td class='tra'  lang='fr'>
+Conseillé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+WordPress Repository</td>
+<td class='tra'  lang='fr'>
+Dépôt WordPress</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+External Source</td>
+<td class='tra'  lang='fr'>
+Source externe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pre-Packaged</td>
+<td class='tra'  lang='fr'>
+Préemballés</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Not Installed</td>
+<td class='tra'  lang='fr'>
+Non Installé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Installed But Not Activated</td>
+<td class='tra'  lang='fr'>
+Installé mais pas activé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Active</td>
+<td class='tra'  lang='fr'>
+Actif</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Required Update not Available</td>
+<td class='tra'  lang='fr'>
+Mise à jour requise non disponible</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Requires Update</td>
+<td class='tra'  lang='fr'>
+A besoin de mise à jour</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update recommended</td>
+<td class='tra'  lang='fr'>
+Mise à jour recommandée</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+%1$s, %2$s <span class='msgctxt'>[%1$s = install status, %2$s = update status]</span></td>
+<td class='tra'  lang='fr'>
+%1$s, %2$s (%1$s = Etat d'installation, %2$s = état de mise à jour)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>All &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+  <li>All &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+</ol>
+ <span class='msgctxt'>[plugins]</span></td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Tout &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+  <li>Tout &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>To Install &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+  <li>To Install &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>À installer &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+  <li>À installer &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Update Available &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+  <li>Update Available &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Mise à jour disponible &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+  <li>Mise à jour disponible &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>To Activate &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+  <li>To Activate &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Activer &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+  <li>Activer &lt;span class="count"&gt;(%s)&lt;/span&gt;</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+unknown <span class='msgctxt'>[as in: "version nr unknown"]</span></td>
+<td class='tra'  lang='fr'>
+inconnu</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Installed version:</td>
+<td class='tra'  lang='fr'>
+Version installée:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Minimum required version:</td>
+<td class='tra'  lang='fr'>
+Version minimum requise:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Available version:</td>
+<td class='tra'  lang='fr'>
+Disponible en version:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No plugins to install, update or activate. &lt;a href="%1$s"&gt;Return to the Dashboard&lt;/a&gt;</td>
+<td class='tra'  lang='fr'>
+﻿Aucune extensions à installer, à mettre à jour ou à activer. &lt;a href="%1$s"&gt;Retourner au tableau de bord&lt;/a&gt;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Plugin</td>
+<td class='tra'  lang='fr'>
+Plugin</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Source</td>
+<td class='tra'  lang='fr'>
+Source</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Type</td>
+<td class='tra'  lang='fr'>
+Type</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Version</td>
+<td class='tra'  lang='fr'>
+Version</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Status</td>
+<td class='tra'  lang='fr'>
+Statut</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Install %2$s <span class='msgctxt'>[%2$s = plugin name in screen reader markup]</span></td>
+<td class='tra'  lang='fr'>
+Installer %2$s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update %2$s <span class='msgctxt'>[%2$s = plugin name in screen reader markup]</span></td>
+<td class='tra'  lang='fr'>
+Mettre à jour %2$s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Activate %2$s <span class='msgctxt'>[%2$s = plugin name in screen reader markup]</span></td>
+<td class='tra'  lang='fr'>
+Activer %2$s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Upgrade message from the plugin author:</td>
+<td class='tra'  lang='fr'>
+Mise à jour message de l’auteur de l’extension :</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Install</td>
+<td class='tra'  lang='fr'>
+Installer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update</td>
+<td class='tra'  lang='fr'>
+Mettre à jour</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Activate</td>
+<td class='tra'  lang='fr'>
+Activer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No plugins were selected to be installed. No action taken.</td>
+<td class='tra'  lang='fr'>
+Aucun plugins n'ont été sélectionnés pour être installés. Aucune action effectuée.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No plugins were selected to be updated. No action taken.</td>
+<td class='tra'  lang='fr'>
+Aucun plugins ont été sélectionnés pour être mis à jour. Pas d'action prise.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No plugins are available to be installed at this time.</td>
+<td class='tra'  lang='fr'>
+Aucun plugins sont disponibles pour être installé à ce moment.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No plugins are available to be updated at this time.</td>
+<td class='tra'  lang='fr'>
+Pas d’extension disponible pour être mise à jour à l’heure actuelle.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No plugins were selected to be activated. No action taken.</td>
+<td class='tra'  lang='fr'>
+Aucun plugins ont été sélectionnés pour être activé. Pas d'action prise.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No plugins are available to be activated at this time.</td>
+<td class='tra'  lang='fr'>
+Aucun plugins sont disponibles pour être activés à ce moment.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Plugin activation failed.</td>
+<td class='tra'  lang='fr'>
+L'activation de plugin a échoué.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Updating Plugin %1$s (%2$d/%3$d)</td>
+<td class='tra'  lang='fr'>
+Mise à jour Plugin %1$s (%2$d/%3$d)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+An error occurred while installing %1$s: &lt;strong&gt;%2$s&lt;/strong&gt;.</td>
+<td class='tra'  lang='fr'>
+Une erreur s'est produite lors de l'installation %1$s: &lt;strong&gt;%2$s&lt;/strong&gt;.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The installation of %1$s failed.</td>
+<td class='tra'  lang='fr'>
+L'installation de %1$s a échoué.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The installation and activation process is starting. This process may take a while on some hosts, so please be patient.</td>
+<td class='tra'  lang='fr'>
+Le processus d’installation et d’activation commence… Il peut prendre un certain temps sur certains serveurs, soyez patients. </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+%1$s installed and activated successfully.</td>
+<td class='tra'  lang='fr'>
+%1$s installé et activé avec succès.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Show Details</td>
+<td class='tra'  lang='fr'>
+Afficher les détails</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Hide Details</td>
+<td class='tra'  lang='fr'>
+Cacher les détails</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All installations and activations have been completed.</td>
+<td class='tra'  lang='fr'>
+Toutes les installations et activations ont été achevées. </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Installing and Activating Plugin %1$s (%2$d/%3$d)</td>
+<td class='tra'  lang='fr'>
+Installation et activation Plugin %1$s (%2$d/%3$d)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The installation process is starting. This process may take a while on some hosts, so please be patient.</td>
+<td class='tra'  lang='fr'>
+Le processus d’installation et d’activation commence. Ce processus peut prendre un certain temps sur certains serveurs, soyez patients. </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+%1$s installed successfully.</td>
+<td class='tra'  lang='fr'>
+%1$s est installé avec succès.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All installations have been completed.</td>
+<td class='tra'  lang='fr'>
+Toutes les installations ont été effectué.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Installing Plugin %1$s (%2$d/%3$d)</td>
+<td class='tra'  lang='fr'>
+Installation d’extension %1$s (%2$d/%3$d)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.</li>
+  <li>Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Désolé, mais vous n’avez pas les autorisations adéquates pour installer le plugin %s. Contactez l’administrateur de ce site pour obtenir de l’aide.</li>
+  <li>Désolé, mais vous n’avez pas les autorisations adéquates pour installer les plugins %s. Contactez l’administrateur de ce site pour obtenir de l’aide.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.</li>
+  <li>Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Désolé, mais vous n’avez pas les autorisations adéquates pour activer le plugin %s. Contactez l’administrateur de ce site pour obtenir de l’aide.</li>
+  <li>Désolé, mais vous n’avez pas les autorisations adéquates pour activer les plugins %s. Contactez l’administrateur de ce site pour obtenir de l’aide.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.</li>
+  <li>Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Désolé, mais vous n’avez pas les autorisations adéquates pour mettre à jour le plugin %s. Contactez l’administrateur de ce site pour obtenir de l’aide.</li>
+  <li>Désolé, mais vous n’avez pas les autorisations adéquates pour mettre à jour les plugins %s. Contactez l’administrateur de ce site pour obtenir de l’aide.</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>Activate installed plugin</li>
+  <li>Activate installed plugins</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>Activer le plugin installé</li>
+  <li>Activer les plugins installés</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All plugins installed and activated successfully. %s</td>
+<td class='tra'  lang='fr'>
+Tous les plugins ont été installé et activé avec succès. %s</td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+, </td>
+<td class='tra'  lang='fr'>
+,</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+translators: used between list items, there is a space after the comma<br>
+</p>
+</div></td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Posted in %1$s</td>
+<td class='tra'  lang='fr'>
+Publié dans %1$s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Tagged %1$s</td>
+<td class='tra'  lang='fr'>
+Tagged %1$s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Leave a comment</td>
+<td class='tra'  lang='fr'>
+Laissez un commentaire</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+1 Comment</td>
+<td class='tra'  lang='fr'>
+1 Commentaire</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+% Comments</td>
+<td class='tra'  lang='fr'>
+% Commentaires</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pingback:</td>
+<td class='tra'  lang='fr'>
+Pingback:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+(Edit)</td>
+<td class='tra'  lang='fr'>
+(Modifier)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your comment is awaiting moderation.</td>
+<td class='tra'  lang='fr'>
+Votre commentaire est en attente de valisation</td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+on %1$s</td>
+<td class='tra'  lang='fr'>
+on %1$s</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+translators: 1: date, 2: time<br>
+</p>
+</div></td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Or browse the highlights</td>
+<td class='tra'  lang='fr'>
+Ou parcourir les faits saillants</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Let's add your first listing! To better familiarize with the process, start by adding a good</td>
+<td class='tra'  lang='fr'>
+Ajoutez votre première annonce! Pour mieux se familiariser avec le processus, commencez par ajouter un bon</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+title</td>
+<td class='tra'  lang='fr'>
+titre</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Coffee Heaven</td>
+<td class='tra'  lang='fr'>
+Coffee Heaven</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Visitors can filter their search result by </td>
+<td class='tra'  lang='fr'>
+Les visiteurs peuvent filtrer les résultats de recherche par</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+categories</td>
+<td class='tra'  lang='fr'>
+catégories</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+so make sure you choose them wisely and include all the relevant ones.</td>
+<td class='tra'  lang='fr'>
+alors assurez-vous de les choisir judicieusement et inclure tous ceux qui sont pertinents.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Let's add two categories: "Food" and "Coffee Shops" &amp;#8212; later on we will </td>
+<td class='tra'  lang='fr'>
+Ajoutons deux catégories: "Alimentation" et "Cafés" - Plus tard, nous</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+add icons</td>
+<td class='tra'  lang='fr'>
+ajouter des icônes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+to them</td>
+<td class='tra'  lang='fr'>
+pour eux</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add a short and descriptive</td>
+<td class='tra'  lang='fr'>
+Ajouter une courte description</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Tagline</td>
+<td class='tra'  lang='fr'>
+Slogan</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+like "Speciality Coffee Shop"</td>
+<td class='tra'  lang='fr'>
+comme “Cafés spéciaux ”</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Now you can add the</td>
+<td class='tra'  lang='fr'>
+Maintenant, vous pouvez ajouter le</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+address</td>
+<td class='tra'  lang='fr'>
+adresse</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+of the listing. Let's use "34 Wigmore Street, London"</td>
+<td class='tra'  lang='fr'>
+de l’annonce. Nous allons utiliser “34 Wigmore Street, Londres”</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add 4 or 5</td>
+<td class='tra'  lang='fr'>
+Ajouter 4 ou 5</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+images</td>
+<td class='tra'  lang='fr'>
+images</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+users love them. *Note that the first one appears on the listing card from the archive page</td>
+<td class='tra'  lang='fr'>
+utilisateurs aiment. * Notez que le premier apparaît sur la carte d'inscription à partir de la page d'archive.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Contact information is always useful. If you have a</td>
+<td class='tra'  lang='fr'>
+Nos coordonnées sont toujours utile. Si tu as un</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+phone number</td>
+<td class='tra'  lang='fr'>
+numéro de téléphone</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+a</td>
+<td class='tra'  lang='fr'>
+un</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+website</td>
+<td class='tra'  lang='fr'>
+site web</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+or a</td>
+<td class='tra'  lang='fr'>
+ou</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Twitter username</td>
+<td class='tra'  lang='fr'>
+nom d'utilisateur Twitter</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+at hand -- fill them below</td>
+<td class='tra'  lang='fr'>
+à portée de main - les remplir ci-dessous</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Even if they are optional, they are very important so visitors can get find you</td>
+<td class='tra'  lang='fr'>
+Même s’ils sont facultatifs, ils sont très importants afin que les visiteurs puissent vous trouver</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+We're ready to launch!</td>
+<td class='tra'  lang='fr'>
+Prêt pour le lancement!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Even if there are other fields that you can play with, there's plenty of time afterwards</td>
+<td class='tra'  lang='fr'>
+Même s'il y a d'autres champs, vous pouvez jouer avec, il y a beaucoup de temps après</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Fasten your seatbelt and hit the</td>
+<td class='tra'  lang='fr'>
+Attachez votre ceinture et appuyez sur la</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Publish button</td>
+<td class='tra'  lang='fr'>
+bouton Publier</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Congratulations for your first listing!</td>
+<td class='tra'  lang='fr'>
+Félicitations pour votre première annonce!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Let me give you a leaner start by loading some </td>
+<td class='tra'  lang='fr'>
+Permettez-moi de vous donner un début plus maigre en chargeant certains</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+sample categories and icons</td>
+<td class='tra'  lang='fr'>
+échantillon des catégories et icônes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+that you can use (or delete) later on</td>
+<td class='tra'  lang='fr'>
+que vous pouvez utiliser (ou supprimer) plus tard</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Load Sample Categories &amp; Icons</td>
+<td class='tra'  lang='fr'>
+Chargement d'échantillon des categories et icônes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Please wait a few minutes (between 1 and 3 minutes usually, but depending on your hosting it can take longer) and</td>
+<td class='tra'  lang='fr'>
+Veuillez patienter quelques minutes (entre 1 et 3 minutes habituellement, mais selon l’hébergement, cela peut prendre plus de temps) et</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+don't reload the page</td>
+<td class='tra'  lang='fr'>
+ne pas recharger la page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You will be notified as soon as the import has finished!</td>
+<td class='tra'  lang='fr'>
+Vous serez informé dès que l’importation sera terminée!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+sample tags and icons</td>
+<td class='tra'  lang='fr'>
+échantillon mots-clés et icônes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Load Sample Tags &amp; Icons</td>
+<td class='tra'  lang='fr'>
+Exemple de chargement Mots-Clés &amp; Icônes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Next &amp;rarr;</td>
+<td class='tra'  lang='fr'>
+Suivant &amp; rarr;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+&amp;larr; Prev</td>
+<td class='tra'  lang='fr'>
+&amp;larr; Précédent</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Finish!</td>
+<td class='tra'  lang='fr'>
+Terminer!</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Step</td>
+<td class='tra'  lang='fr'>
+Étape</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+PixCare&amp;reg; Assistant</td>
+<td class='tra'  lang='fr'>
+PixCare&amp;reg; Assistant</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Front Page Sections</td>
+<td class='tra'  lang='fr'>
+Sections Page Accueil</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Content</td>
+<td class='tra'  lang='fr'>
+Contenu:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The wider area where the main listing content should go.</td>
+<td class='tra'  lang='fr'>
+La zone plus large où la teneur en liste principale devrait aller.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Sidebar Top</td>
+<td class='tra'  lang='fr'>
+Haut de la barre latérale</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Placed to the top of the right sidebar, this area put each widget in a visually different boxed container.</td>
+<td class='tra'  lang='fr'>
+Placé en haut de la barre de droite, cette zone a mis chaque widget dans un conteneur en boîte visuellement différent.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Sidebar Bottom</td>
+<td class='tra'  lang='fr'>
+Bas de la barre latérale</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Placed below the Sidebar Top, this area brings together all the widgets under the same container.</td>
+<td class='tra'  lang='fr'>
+Placé en dessous de la barre latérale, cette zone regroupe l'ensemble des widgets sous le même conteneur.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Footer Area</td>
+<td class='tra'  lang='fr'>
+Zone de bas de page</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Actions</td>
+<td class='tra'  lang='fr'>
+Actions</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The action buttons like Write a Review, Share or Add to Favorites.</td>
+<td class='tra'  lang='fr'>
+Les boutons d'action comme Écrire un avis, Partager ou Ajouter aux favoris.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Write a review</td>
+<td class='tra'  lang='fr'>
+Ecrire une évaluation</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Review</td>
+<td class='tra'  lang='fr'>
+Révision</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Share</td>
+<td class='tra'  lang='fr'>
+Partager</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The main listing content.</td>
+<td class='tra'  lang='fr'>
+Le contenu principal d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Reviews</td>
+<td class='tra'  lang='fr'>
+Avis</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+A list of the recent reviews and the submission form.</td>
+<td class='tra'  lang='fr'>
+Une liste des récentes avis et le formulaire de soumission.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Tags</td>
+<td class='tra'  lang='fr'>
+Mots-clés</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+A list of tags or amenities.</td>
+<td class='tra'  lang='fr'>
+Une liste de mots-clés ou équipements.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Location Map</td>
+<td class='tra'  lang='fr'>
+Emplacement sur la carte</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+A Map View of the listing location along with a Directions link to Google Map.</td>
+<td class='tra'  lang='fr'>
+A voir la carte de l'emplacement de la fiche avec un itinéraire Lien vers Google Map.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Get directions</td>
+<td class='tra'  lang='fr'>
+Obtenir les directions</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The listing categories along with the related icon.</td>
+<td class='tra'  lang='fr'>
+Les catégories d'annonce ainsi que l'icône associée.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The Hours field content.</td>
+<td class='tra'  lang='fr'>
+Le contenu du champ Heures.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+The attached images in a gallery grid format.</td>
+<td class='tra'  lang='fr'>
+Les images jointes dans un format galerie de grille.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Photo gallery</td>
+<td class='tra'  lang='fr'>
+Galerie de photos</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All photos</td>
+<td class='tra'  lang='fr'>
+Toutes les photos</td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+Front Page</td>
+<td class='tra'  lang='fr'>
+Page de garde</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+Template Name of the plugin/theme<br>
+</p>
+</div></td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing Cards</td>
+<td class='tra'  lang='fr'>
+Cartes d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Displays a list of your listings based on different criteria (eg. latest of featured listings from a specific category)</td>
+<td class='tra'  lang='fr'>
+Affiche une liste de vos annonces sur la base de différents critères (ex. la dernière annonce vedette d’une catégorie spécifique)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Title:</td>
+<td class='tra'  lang='fr'>
+Titre:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Subtitle:</td>
+<td class='tra'  lang='fr'>
+Sous-titre:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Number of items to show:</td>
+<td class='tra'  lang='fr'>
+Nombre d'éléments à afficher:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Show:</td>
+<td class='tra'  lang='fr'>
+Montrer:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All Listings</td>
+<td class='tra'  lang='fr'>
+Tous les annonces</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Featured Listings</td>
+<td class='tra'  lang='fr'>
+Annonces vedette</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Order by:</td>
+<td class='tra'  lang='fr'>
+Trier par:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Date</td>
+<td class='tra'  lang='fr'>
+Date</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Random</td>
+<td class='tra'  lang='fr'>
+Aléatoire</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Items IDs(optional):</td>
+<td class='tra'  lang='fr'>
+ID d’articles (facultatif) :</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Categories Slug(optional):</td>
+<td class='tra'  lang='fr'>
+Etiquettes Catégories (facultatif):</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Explore these lovely listings</td>
+<td class='tra'  lang='fr'>
+Explorez ces belles annonces</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Listing Categories</td>
+<td class='tra'  lang='fr'>
+Catégories d'annonce</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Display a list of listing categories based on different criteria (eg. most popular, random) or specify which ones you want to show.</td>
+<td class='tra'  lang='fr'>
+Afficher une liste des catégories d'annonces en fonction de différents critères (par exemple. Le plus populaire, aléatoire) ou spécifier ceux que vous voulez montrer.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Default</td>
+<td class='tra'  lang='fr'>
+Défaut</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Number of Listings</td>
+<td class='tra'  lang='fr'>
+Nombre d'annonces</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+What are you interested in?</td>
+<td class='tra'  lang='fr'>
+En quoi es-tu intéressé?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Discover something nice</td>
+<td class='tra'  lang='fr'>
+Découvrez quelque chose de sympathique </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Recent Posts</td>
+<td class='tra'  lang='fr'>
+Articles récents</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+A list of the latest posts from blog.</td>
+<td class='tra'  lang='fr'>
+Une liste des derniers articles du blog.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+View All</td>
+<td class='tra'  lang='fr'>
+Voir tout</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Latest Posts</td>
+<td class='tra'  lang='fr'>
+Derniers Articles:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Fresh articles from the blog</td>
+<td class='tra'  lang='fr'>
+Nouveaux articles du blog</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Spotlights</td>
+<td class='tra'  lang='fr'>
+Projecteurs</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Emphasize some features of your website or use it as a step-by-step explaining process.</td>
+<td class='tra'  lang='fr'>
+Mettre l'accent sur certaines fonctionnalités de votre site Web ou de l'utiliser comme un processus étape par étape expliquant.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select an Image</td>
+<td class='tra'  lang='fr'>
+Sélectionner l’image</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update Image</td>
+<td class='tra'  lang='fr'>
+Mettre à jour l’image</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Main Title:</td>
+<td class='tra'  lang='fr'>
+Titre principal:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Main Subtitle:</td>
+<td class='tra'  lang='fr'>
+Sous-titre principal:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Content:</td>
+<td class='tra'  lang='fr'>
+Contenu:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add Spotlight</td>
+<td class='tra'  lang='fr'>
+Ajouter Spotlight</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Choose an Image</td>
+<td class='tra'  lang='fr'>
+Choisissez une image</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+How It Works</td>
+<td class='tra'  lang='fr'>
+Comment cela fonctionne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+There are no listings matching your search.</td>
+<td class='tra'  lang='fr'>
+Il n'y a pas d'annonces correspondante à votre recherche.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Twitter</td>
+<td class='tra'  lang='fr'>
+Twitter</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Website</td>
+<td class='tra'  lang='fr'>
+Site web</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Posted %s ago</td>
+<td class='tra'  lang='fr'>
+Posté il y a %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This position has been filled</td>
+<td class='tra'  lang='fr'>
+Cette position a été remplie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Applications have closed</td>
+<td class='tra'  lang='fr'>
+Applications ont fermé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+This listing has expired.</td>
+<td class='tra'  lang='fr'>
+Cette annonce a expiré.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Maximum file size: %s.</td>
+<td class='tra'  lang='fr'>
+Taille maximale du fichier : %s .</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No results match</td>
+<td class='tra'  lang='fr'>
+Aucun résultat ne correspond</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Select Some Options</td>
+<td class='tra'  lang='fr'>
+Sélectionnez Certaines options</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+remove</td>
+<td class='tra'  lang='fr'>
+retirer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Location</td>
+<td class='tra'  lang='fr'>
+Emplacement</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Category</td>
+<td class='tra'  lang='fr'>
+Catégorie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Any category</td>
+<td class='tra'  lang='fr'>
+Toute catégorie</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Filter by tags</td>
+<td class='tra'  lang='fr'>
+Filtrer par étiquettes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Filter</td>
+<td class='tra'  lang='fr'>
+Filtre</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Map View</td>
+<td class='tra'  lang='fr'>
+Vue de la carte</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Cards View</td>
+<td class='tra'  lang='fr'>
+Vue Cartes</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your browser does not support JavaScript, or it is disabled. JavaScript must be enabled in order to view listings.</td>
+<td class='tra'  lang='fr'>
+Votre navigateur ne supporte pas JavaScript, ou il a été désactivé. JavaScript doit être activé pour voir les announces.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+(optional)</td>
+<td class='tra'  lang='fr'>
+(optionnel)</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search</td>
+<td class='tra'  lang='fr'>
+Chercher</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Search results for: %s</td>
+<td class='tra'  lang='fr'>
+Résultats de la recherche pour: %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Pages:</td>
+<td class='tra'  lang='fr'>
+Pages:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Tag: </td>
+<td class='tra'  lang='fr'>
+Étiquette:</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Nothing Found</td>
+<td class='tra'  lang='fr'>
+Rien n'a été trouvé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Ready to publish your first post? &lt;a href="%1$s"&gt;Get started here&lt;/a&gt;.</td>
+<td class='tra'  lang='fr'>
+Prêt à publier votre premier article ? &lt;a href=“%1$s”&gt;Démarrer ici&lt;/a&gt;.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Sorry, but nothing matched your search terms. Please try again with some different keywords.</td>
+<td class='tra'  lang='fr'>
+Désolé mais rien ne correspond à vos critères de recherche. Essayez avec d’autres mots-clés.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+It seems we can&amp;rsquo;t find what you&amp;rsquo;re looking for. Perhaps searching can help.</td>
+<td class='tra'  lang='fr'>
+Il semble que nous ne puissions trouver ce que vous cherchez. Essayez peut-être une recherche.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%s job posted out of %d</li>
+  <li>%s jobs posted out of %d</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>%s emploi affiché sur %d</li>
+  <li>%s emplois affichés sur %d</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%s job posted</li>
+  <li>%s jobs posted</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>%s emploi affiché</li>
+  <li>%s emplois affichés</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>listed for %s day</li>
+  <li>listed for %s days</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>répertorié pour le jour %s</li>
+  <li>répertorié pour les jours %s</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Most Popular</td>
+<td class='tra'  lang='fr'>
+Le plus populaire</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Free</td>
+<td class='tra'  lang='fr'>
+Gratuit</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Get Started</td>
+<td class='tra'  lang='fr'>
+Commencer</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+No packages found</td>
+<td class='tra'  lang='fr'>
+Aucun paquet trouvé</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+All Products</td>
+<td class='tra'  lang='fr'>
+Tous les produits</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Product</td>
+<td class='tra'  lang='fr'>
+Produit</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Price</td>
+<td class='tra'  lang='fr'>
+Prix</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Quantity</td>
+<td class='tra'  lang='fr'>
+Quantité</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Total</td>
+<td class='tra'  lang='fr'>
+Total</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Available on backorder</td>
+<td class='tra'  lang='fr'>
+Disponible en rupture de stock</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remove this item</td>
+<td class='tra'  lang='fr'>
+Retirer cet objet</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Coupon</td>
+<td class='tra'  lang='fr'>
+Coupon</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Coupon code</td>
+<td class='tra'  lang='fr'>
+Code coupon</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Apply Coupon</td>
+<td class='tra'  lang='fr'>
+Appliquer Coupon</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Update Cart</td>
+<td class='tra'  lang='fr'>
+Mise à jour panier</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Showing the single result</td>
+<td class='tra'  lang='fr'>
+Afficher le résultat unique</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Showing all %d results</td>
+<td class='tra'  lang='fr'>
+Afficher tous les résultats %d</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Showing %1$d&amp;ndash;%2$d of %3$d results <span class='msgctxt'>[%1$d = first, %2$d = last, %3$d = total]</span></td>
+<td class='tra'  lang='fr'>
+Actuellement visible : %1$d&amp;ndash;%2$d de %3$d résultats</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Login</td>
+<td class='tra'  lang='fr'>
+Login</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Username or email address</td>
+<td class='tra'  lang='fr'>
+Nom d'utilisateur ou adresse e-mail</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Password</td>
+<td class='tra'  lang='fr'>
+Mot de passe</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Remember me</td>
+<td class='tra'  lang='fr'>
+Rester connecté</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Lost your password?</td>
+<td class='tra'  lang='fr'>
+Mot de passe perdu?</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Register</td>
+<td class='tra'  lang='fr'>
+Registre</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Username</td>
+<td class='tra'  lang='fr'>
+Nom d'utilisateur</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Email address</td>
+<td class='tra'  lang='fr'>
+Adresse e-mail</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Anti-spam</td>
+<td class='tra'  lang='fr'>
+Anti-spam</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your comment is awaiting approval</td>
+<td class='tra'  lang='fr'>
+Commentaire en attente d’approbation</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+verified owner</td>
+<td class='tra'  lang='fr'>
+propriétaire vérifié</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Rated %d out of 5</td>
+<td class='tra'  lang='fr'>
+Évalué %d sur 5</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+out of 5</td>
+<td class='tra'  lang='fr'>
+sur 5</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+<ol class='plurals'>
+  <li>%s review for %s</li>
+  <li>%s reviews for %s</li>
+</ol>
+</td>
+<td class='tra'  lang='fr'>
+<ol class='plurals'>
+  <li>%s avis sur %s</li>
+  <li>%s avis sur %s</li>
+</ol>
+</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+There are no reviews yet.</td>
+<td class='tra'  lang='fr'>
+Il n’y a aucun avis pour le moment.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Add a review</td>
+<td class='tra'  lang='fr'>
+Ajouter un avis </td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Be the first to review</td>
+<td class='tra'  lang='fr'>
+Soyer le premier a déposer un avis</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Leave a Reply to %s</td>
+<td class='tra'  lang='fr'>
+Laissez une réponse à  %s</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Name</td>
+<td class='tra'  lang='fr'>
+Nom</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Email</td>
+<td class='tra'  lang='fr'>
+Email</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+You must be &lt;a href="%s"&gt;logged in&lt;/a&gt; to post a review.</td>
+<td class='tra'  lang='fr'>
+Vous devez être &lt;a href="%s"&gt;connecté&lt;/a&gt; pour publier un avis.</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Rating</td>
+<td class='tra'  lang='fr'>
+Votre note</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Rate&amp;hellip;</td>
+<td class='tra'  lang='fr'>
+Évaluer&amp;hellip;</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Perfect</td>
+<td class='tra'  lang='fr'>
+Parfait</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Good</td>
+<td class='tra'  lang='fr'>
+Bien</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Average</td>
+<td class='tra'  lang='fr'>
+Moyenne</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Not that bad</td>
+<td class='tra'  lang='fr'>
+Pas si mal</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Very Poor</td>
+<td class='tra'  lang='fr'>
+Très pauvre</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Your Review</td>
+<td class='tra'  lang='fr'>
+Votre revue</td>
+</tr>
+<tr class='i'>
+<td class='src'  lang='en'>
+Only logged in customers who have purchased this product may leave a review.</td>
+<td class='tra'  lang='fr'>
+Seul les clients connectés et ayant acheté ce produit peuvent laisser un avis.</td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+Listable</td>
+<td class='tra'  lang='fr'>
+Listable</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+Theme Name of the plugin/theme<br>
+</p>
+</div></td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+https://pixelgrade.com/demos/listable/</td>
+<td class='tra'  lang='fr'>
+https://pixelgrade.com/demos/listable/</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+Theme URI of the plugin/theme<br>
+</p>
+</div></td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+A directory WordPress theme that will help you create and manage a local or global listings site.</td>
+<td class='tra'  lang='fr'>
+A directory WordPress thème that will help you create and manage a local or global listings site.</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+Description of the plugin/theme<br>
+</p>
+</div></td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+PixelGrade</td>
+<td class='tra'  lang='fr'>
+PixelGrade</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+Author of the plugin/theme<br>
+</p>
+</div></td>
+</tr>
+<tr class='i with-comments'>
+<td class='src'  lang='en'>
+https://pixelgrade.com/</td>
+<td class='tra'  lang='fr'>
+https://pixelgrade.com/</td>
+</tr>
+<tr class='comments'>
+  <td colspan='2'><div><p>
+Author URI of the plugin/theme<br>
+</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
